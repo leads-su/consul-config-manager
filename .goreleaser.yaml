@@ -1,4 +1,4 @@
-project_name: consul-config-manager
+project_name: ccm
 
 before:
   hooks:
