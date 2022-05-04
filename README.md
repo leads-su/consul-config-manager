@@ -67,7 +67,7 @@ CCM is able to be configured with multiple servers in mind.
 That means that in case there is a problem with one of the servers, CCM will switch to another one.  
 Also, upon initial connection, all servers will be pinged and server with lowest latency will be used.
 
-# Initila Setup
+# Initial Setup
 
 By default, CCM will use `/etc/ccm.d` as its configuration folder.  
 It will also try to load `config.yml` from this directory as its default configuration source.  
