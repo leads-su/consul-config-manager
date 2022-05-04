@@ -1,0 +1,45 @@
+agent:
+  network:
+    interface: ""
+    address: "127.0.0.1"
+    port: 32175
+  health_check:
+    ttl: true
+    http: true
+consul:
+  enabled: true
+  datacenter: "dc0"
+  addresses:
+    - scheme: "http"
+      host: "consul1.local"
+      port: 8500
+    - scheme: "http"
+      host: "consul2.local"
+      port: 8500
+    - scheme: "http"
+      host: "consul3.local"
+      port: 8500
+    - scheme: "http"
+      host: "consul4.local"
+      port: 8500
+    - scheme: "http"
+      host: "consul5.local"
+      port: 8500
+  token: "consul-acl-access-token"
+  write_to: "/etc/ccm.d"
+environment: "production"
+log:
+  level: DEBUG
+  write_to: "/var/log/ccm"
+sse:
+  write_to: "/var/log/ccm/events"
+notifier:
+  enabled: True
+  notify_on:
+    success: false
+    error: true
+  notifiers:
+    telegram:
+      enabled: True
+      token: "telegram-token"
+      recipients: []
