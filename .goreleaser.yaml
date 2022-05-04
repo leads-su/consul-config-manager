@@ -28,8 +28,6 @@ archives:
       - CHANGELOG*
       - readme*
       - README*
-      - license
-      - LICENSE*
 
 checksum:
   name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
